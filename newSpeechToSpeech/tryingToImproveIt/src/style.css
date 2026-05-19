@@ -1,0 +1,159 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1f2933;
+  background:
+    radial-gradient(circle at top, #fef3c7 0%, #fffaf0 38%, #f8fafc 100%);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.card {
+  width: min(56rem, 100%);
+  padding: 2rem;
+  border: 1px solid rgba(31, 41, 51, 0.1);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1;
+}
+
+p {
+  margin: 0 0 0.9rem;
+}
+
+.hero {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.status {
+  margin-top: 0;
+  min-width: 15rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.85rem;
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+.transcript-panel {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(31, 41, 51, 0.1);
+}
+
+.transcript-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.transcript-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.transcript-header p {
+  margin: 0;
+  color: #52606d;
+  font-size: 0.95rem;
+}
+
+.transcript-log {
+  display: grid;
+  gap: 0.85rem;
+  max-height: 24rem;
+  overflow-y: auto;
+  padding-right: 0.35rem;
+}
+
+.transcript-item {
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+}
+
+.transcript-item-user {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.transcript-item-assistant {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.transcript-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.transcript-speaker {
+  font-weight: 700;
+}
+
+.transcript-state {
+  color: #52606d;
+}
+
+.transcript-text {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.transcript-empty {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f8fafc;
+  color: #52606d;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .status {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .transcript-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

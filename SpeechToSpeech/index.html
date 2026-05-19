@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speech To Speech Demo</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        margin: 0;
+        font-family: Consolas, "Courier New", monospace;
+        background: #111;
+        color: #f5f5f5;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: 32px;
+      }
+
+      .controls {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+      }
+
+      button {
+        padding: 10px 16px;
+        border: 1px solid #666;
+        background: #222;
+        color: #fff;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+
+      #status {
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      #log {
+        min-height: 60vh;
+        padding: 16px;
+        border: 1px solid #444;
+        background: #171717;
+        overflow-y: auto;
+      }
+
+      .message {
+        margin: 0 0 16px;
+        line-height: 1.5;
+        font-size: 28px;
+        white-space: pre-wrap;
+      }
+
+      .speaker {
+        display: inline-block;
+        min-width: 170px;
+        color: #aaa;
+      }
+
+      .user .speaker {
+        color: #7dd3fc;
+      }
+
+      .assistant .speaker {
+        color: #fca5a5;
+      }
+
+      #error {
+        margin-top: 12px;
+        color: #f87171;
+        font-size: 20px;
+        min-height: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Speech-to-Speech Classroom Demo</h1>
+      <div class="controls">
+        <button id="connectBtn">Connect</button>
+        <button id="disconnectBtn" disabled>Disconnect</button>
+        <span id="status">Disconnected</span>
+      </div>
+      <div id="log"></div>
+      <div id="error"></div>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+  </html>
